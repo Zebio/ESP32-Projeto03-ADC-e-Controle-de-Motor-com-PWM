@@ -2,4 +2,4 @@ Neste projeto usamos o ADC para converter o valor de um potenciômetro e control
 usando o PWM do ESP.
 
 
-![](imagens/hardware.png)
+![](Imagens/hardware.png)
