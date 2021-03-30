@@ -1,0 +1,252 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP32DEVKITV1:ESP32DEVKITV1 U?
+U 1 1 60636349
+P 4750 3600
+F 0 "U?" V 3674 3600 50  0000 C CNN
+F 1 "ESP32DEVKITV1" H 4750 3600 50  0001 L BNN
+F 2 "ESP32-DEVKITV1" H 4750 3600 50  0001 L BNN
+F 3 "" H 4750 3600 50  0001 L BNN
+F 4 "ESP32 DEVKIT V1" H 4750 3600 50  0001 L BNN "MP"
+F 5 "None" H 4750 3600 50  0001 L BNN "Price"
+F 6 "Unavailable" H 4750 3600 50  0001 L BNN "Availability"
+F 7 "Package" H 4750 3600 50  0001 L BNN "Package"
+F 8 "Do it" H 4750 3600 50  0001 L BNN "MF"
+F 9 "Dual core, Wi-Fi: 2.4 GHz up to 150 Mbits/s,BLE (Bluetooth Low Energy) and legacy Bluetooth, 32 bits, Up to 240 MHz" H 4750 3600 50  0001 L BNN "Description"
+	1    4750 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT Potenciometro
+U 1 1 6063873E
+P 2500 3100
+F 0 "Potenciometro" H 2430 3146 50  0000 R CNN
+F 1 "10k" H 2430 3055 50  0000 R CNN
+F 2 "" H 2500 3100 50  0001 C CNN
+F 3 "~" H 2500 3100 50  0001 C CNN
+	1    2500 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V USB
+U 1 1 60639871
+P 5600 2550
+F 0 "USB" H 5688 2633 50  0000 L CNN
+F 1 "+5V" H 5688 2542 50  0000 L CNN
+F 2 "" H 5600 2550 50  0001 C CNN
+F 3 "" H 5600 2550 50  0001 C CNN
+	1    5600 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2550 5600 2700
+Wire Wire Line
+	5600 2700 5450 2700
+$Comp
+L power:+3.3V Regulator
+U 1 1 6063A1EB
+P 3650 2550
+F 0 "Regulator" H 3738 2633 50  0000 L CNN
+F 1 "+3.3V" H 3738 2542 50  0000 L CNN
+F 2 "" H 3650 2550 50  0001 C CNN
+F 3 "" H 3650 2550 50  0001 C CNN
+	1    3650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2550 3650 2700
+$Comp
+L power:GND #PWR?
+U 1 1 6063B04D
+P 5600 2800
+F 0 "#PWR?" H 5600 2550 50  0001 C CNN
+F 1 "GND" H 5605 2627 50  0000 C CNN
+F 2 "" H 5600 2800 50  0001 C CNN
+F 3 "" H 5600 2800 50  0001 C CNN
+	1    5600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6063B771
+P 3900 2800
+F 0 "#PWR?" H 3900 2550 50  0001 C CNN
+F 1 "GND" H 3905 2627 50  0000 C CNN
+F 2 "" H 3900 2800 50  0001 C CNN
+F 3 "" H 3900 2800 50  0001 C CNN
+	1    3900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2800 4050 2800
+Wire Wire Line
+	5600 2800 5450 2800
+Wire Wire Line
+	3650 2700 4050 2700
+$Comp
+L power:+3.3V Regulator
+U 1 1 6063CFDC
+P 2500 2550
+F 0 "Regulator" H 2588 2633 50  0000 L CNN
+F 1 "+3.3V" H 2588 2542 50  0000 L CNN
+F 2 "" H 2500 2550 50  0001 C CNN
+F 3 "" H 2500 2550 50  0001 C CNN
+	1    2500 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6063D58A
+P 2500 3400
+F 0 "#PWR?" H 2500 3150 50  0001 C CNN
+F 1 "GND" H 2505 3227 50  0000 C CNN
+F 2 "" H 2500 3400 50  0001 C CNN
+F 3 "" H 2500 3400 50  0001 C CNN
+	1    2500 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3400 2500 3250
+Wire Wire Line
+	2500 2550 2500 2950
+Text GLabel 3800 3100 0    50   Input ~ 0
+Pot
+Text GLabel 2200 3100 0    50   Output ~ 0
+Pot
+Wire Wire Line
+	2350 3100 2200 3100
+Wire Wire Line
+	3800 3100 4050 3100
+Text GLabel 3800 3400 0    50   Output ~ 0
+led
+Wire Wire Line
+	3800 3400 4050 3400
+Text GLabel 2200 4200 0    50   Input ~ 0
+led
+$Comp
+L Device:LED led
+U 1 1 6064074A
+P 2450 4200
+F 0 "led" H 2443 4417 50  0000 C CNN
+F 1 "LED" H 2443 4326 50  0000 C CNN
+F 2 "" H 2450 4200 50  0001 C CNN
+F 3 "~" H 2450 4200 50  0001 C CNN
+	1    2450 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 60641025
+P 2900 4200
+F 0 "R2" V 3096 4200 50  0000 C CNN
+F 1 "330" V 3005 4200 50  0000 C CNN
+F 2 "" H 2900 4200 50  0001 C CNN
+F 3 "~" H 2900 4200 50  0001 C CNN
+	1    2900 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6064195C
+P 3150 4250
+F 0 "#PWR?" H 3150 4000 50  0001 C CNN
+F 1 "GND" H 3155 4077 50  0000 C CNN
+F 2 "" H 3150 4250 50  0001 C CNN
+F 3 "" H 3150 4250 50  0001 C CNN
+	1    3150 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4250 3150 4200
+Wire Wire Line
+	2800 4200 2600 4200
+Wire Wire Line
+	2300 4200 2200 4200
+$Comp
+L Motor:Motor_DC dc_motor
+U 1 1 60642B08
+P 7500 3100
+F 0 "dc_motor" H 7658 3096 50  0000 L CNN
+F 1 "9V" H 7658 3005 50  0000 L CNN
+F 2 "" H 7500 3010 50  0001 C CNN
+F 3 "~" H 7500 3010 50  0001 C CNN
+	1    7500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR?
+U 1 1 60643621
+P 7500 2600
+F 0 "#PWR?" H 7500 2450 50  0001 C CNN
+F 1 "+9V" H 7515 2773 50  0000 C CNN
+F 2 "" H 7500 2600 50  0001 C CNN
+F 3 "" H 7500 2600 50  0001 C CNN
+	1    7500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2600 7500 2900
+$Comp
+L Transistor_BJT:S8050 Q1
+U 1 1 60644067
+P 7400 3900
+F 0 "Q1" H 7590 3946 50  0000 L CNN
+F 1 "S8050" H 7590 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7600 3825 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 7400 3900 50  0001 L CNN
+	1    7400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3700 7500 3400
+$Comp
+L power:GND #PWR?
+U 1 1 60644A77
+P 7500 4300
+F 0 "#PWR?" H 7500 4050 50  0001 C CNN
+F 1 "GND" H 7505 4127 50  0000 C CNN
+F 2 "" H 7500 4300 50  0001 C CNN
+F 3 "" H 7500 4300 50  0001 C CNN
+	1    7500 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4300 7500 4100
+$Comp
+L Device:R_Small R1
+U 1 1 60645633
+P 6800 3900
+F 0 "R1" V 6604 3900 50  0000 C CNN
+F 1 "330" V 6695 3900 50  0000 C CNN
+F 2 "" H 6800 3900 50  0001 C CNN
+F 3 "~" H 6800 3900 50  0001 C CNN
+	1    6800 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 3900 7200 3900
+Text GLabel 3800 3700 0    50   Output ~ 0
+dc_motor
+Wire Wire Line
+	3800 3700 4050 3700
+Text GLabel 6450 3900 0    50   Input ~ 0
+dc_motor
+Wire Wire Line
+	6450 3900 6700 3900
+Wire Wire Line
+	3150 4200 3000 4200
+$EndSCHEMATC

@@ -28,12 +28,14 @@ analogRead(Pin); e essa função retorna um valor de 0 a 4095.
 /*---------Mapeamento de Hardware-----------*/
 #define dc_motor        21
 #define potenciometro    4
+#define led              5
 
 
 
 /*---------Configurações Iniciais-----------*/
 void setup() {
   ledcAttachPin(dc_motor,0);
+  ledcAttachPin(led,0);
   ledcSetup(0,312500, 8);
 }
 /*------------Loop nfinito------------------*/
